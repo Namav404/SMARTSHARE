@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validate(Email.getText().toString(), Password.getText().toString());
+                startActivity(new Intent(LoginActivity.this, HomepageActivity.class));
             }
         });
 
