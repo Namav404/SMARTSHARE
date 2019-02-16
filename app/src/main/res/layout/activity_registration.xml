@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="80dp"
-    android:paddingVertical="50dp"
-    android:background="@mipmap/background"
+    android:paddingVertical="60dp"
+    android:background="#4800cc"
     tools:context=".RegistrationActivity">
 
     <EditText
@@ -16,11 +16,11 @@
         android:ems="10"
         android:id="@+id/EditTextEnroll"
         android:drawableLeft="@mipmap/id_icon"
-        android:hint=" Enrollment number"
+        android:hint="Enrollment number"
         android:layout_marginTop="10dp"
         android:textColor="#FFF"
-        android:paddingLeft="0dp"
-        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:drawablePadding="8dp"
         android:textColorHint="#999"/>
 
     <EditText
@@ -44,11 +44,11 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:drawableLeft="@mipmap/email_icon"
-        android:hint=" Email address"
+        android:hint="Email address"
         android:layout_marginTop="10dp"
         android:textColor="#FFF"
-        android:paddingLeft="0dp"
-        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:drawablePadding="7dp"
         android:textColorHint="#999"/>
 
     <EditText
@@ -58,11 +58,11 @@
         android:inputType="text"
         android:ems="10"
         android:drawableLeft="@mipmap/phone_icon"
-        android:hint=" Phone number"
+        android:hint="Phone number"
         android:layout_marginTop="10dp"
         android:textColor="#FFF"
-        android:paddingLeft="0dp"
-        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:drawablePadding="7dp"
         android:textColorHint="#999"/>
 
     <EditText
@@ -80,13 +80,13 @@
         android:textColorHint="#999"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="REGISTER"
         android:id="@+id/btnRegister"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
         android:background="@drawable/selector_xml_btn_yellow"
-        android:layout_gravity="center_horizontal"/>
+        android:text="REGISTER" />
 
     <TextView
         android:id="@+id/TextViewLogin"
@@ -95,7 +95,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Already have an account? Login"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:textColor="#FFF"/>
+        android:layout_marginTop="28dp"
+        android:textColor="#FFF"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

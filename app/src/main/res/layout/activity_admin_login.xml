@@ -6,7 +6,7 @@
     android:paddingVertical="50dp"
     android:paddingHorizontal="80dp"
     android:orientation="vertical"
-    android:background="@mipmap/background"
+    android:background="#4800cc"
     tools:context=".AdminLoginActivity">
 
 
@@ -14,7 +14,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        tools:srcCompat="@mipmap/admin_icon"/>
+        android:src="@mipmap/admin_icon"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -45,11 +45,11 @@
         android:textColorHint="#999"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="LOGIN"
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:background="@drawable/selector_xml_btn_yellow"
         android:layout_gravity="center_horizontal"/>
 
@@ -60,8 +60,7 @@
         android:text="Forgot password?"
         android:id="@+id/TextViewFGP"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:textColor="#FFF"
-        />
+        android:layout_marginTop="28dp"
+        android:textColor="#FFF"/>
 
 </LinearLayout>
