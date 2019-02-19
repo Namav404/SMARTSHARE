@@ -11,9 +11,10 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText Email, Password;
-    private Button Login;
-    private TextView Register, AdminLogin;
+     private EditText Email, Password;
+     private Button Login;
+     private TextView Register, AdminLogin;
+     String user_email, user_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +51,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validate(String userEmail, String userPassword) {
-        if (userEmail.equals("nothing@gmail.com") && userPassword.equals("q12we34r")){
-            Toast.makeText(this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this, HomepageActivity.class));
-        }else {
+        if (userEmail.isEmpty() && userPassword.isEmpty()) {
             Toast.makeText(this, "Please enter the correct details!", Toast.LENGTH_SHORT).show();
+        } else {
+            user_email = Email.getText().toString();
+            user_pass = Password.getText().toString();
+            String method = "login";
+            BackgroundTask backgroundTask = new BackgroundTask(LoginActivity.this);
+            backgroundTask.execute(method,user_email,user_pass);
         }
     }
 
