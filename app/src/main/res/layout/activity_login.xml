@@ -62,8 +62,7 @@
         android:id="@+id/TextViewFGP"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25sp"
-        android:textColor="#FFF"
-        />
+        android:textColor="#FFF"/>
 
     <TextView
         android:id="@+id/TextViewRegister"

@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 public class RegistrationActivity extends AppCompatActivity {
 
+    String en_no, user_name, user_email, user_pass, user_pno;
     private EditText userName, userPassword, userEmail, userEnroll, userPhone;
     private Button Register;
     private TextView userLogin;
@@ -29,7 +30,15 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validate()) {
-
+                    en_no = userEnroll.getText().toString();
+                    user_name = userName.getText().toString();
+                    user_email = userEmail.getText().toString();
+                    user_pno = userPhone.getText().toString();
+                    user_pass = userPassword.getText().toString();
+                    String method = "register";
+                    BackgroundTask backgroundTask = new BackgroundTask(RegistrationActivity.this);
+                    backgroundTask.execute(method,en_no,user_name,user_email,user_pno,user_pass);
+                    finish();
                 }
             }
         });
