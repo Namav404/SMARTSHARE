@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 public class RegistrationActivity extends AppCompatActivity {
 
     String en_no, user_name, user_email, user_pass, user_pno;
