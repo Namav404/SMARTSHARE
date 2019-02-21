@@ -54,19 +54,20 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="250dp"
-                    android:layout_height="172dp"
+                    android:layout_width="213dp"
+                    android:layout_height="129dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@android:color/white"
                     android:src="@drawable/paperg" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:text="PAPERS"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textColor="@android:color/black"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -94,7 +95,7 @@
 
                 <ImageView
                     android:layout_width="106dp"
-                    android:layout_height="143dp"
+                    android:layout_height="134dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@android:color/white"
                     android:src="@drawable/noticeg" />
@@ -178,7 +179,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="109dp"
                     android:layout_height="132dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@android:color/white"
