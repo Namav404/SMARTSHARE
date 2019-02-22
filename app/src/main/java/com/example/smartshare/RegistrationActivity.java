@@ -1,18 +1,13 @@
 package com.example.smartshare;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
 public class RegistrationActivity extends AppCompatActivity {
 
     String en_no, user_name, user_email, user_pass, user_pno;
@@ -53,17 +48,17 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        userEnroll = (EditText) findViewById(R.id.EditTextEnroll);
-        userName = (EditText)findViewById(R.id.EditTextName);
-        userEmail = (EditText)findViewById(R.id.EditTextEmail);
-        userPhone = (EditText) findViewById(R.id.EditTextPhone);
-        userPassword = (EditText)findViewById(R.id.EditTextPassword);
-        Register = (Button)findViewById(R.id.btnRegister);
-        userLogin = (TextView)findViewById(R.id.TextViewLogin);
+        userEnroll = findViewById(R.id.EditTextEnroll);
+        userName = findViewById(R.id.EditTextName);
+        userEmail = findViewById(R.id.EditTextEmail);
+        userPhone = findViewById(R.id.EditTextPhone);
+        userPassword = findViewById(R.id.EditTextPassword);
+        Register = findViewById(R.id.btnRegister);
+        userLogin = findViewById(R.id.TextViewLogin);
     }
 
     private boolean validate() {
-        Boolean result = false;
+        boolean result = false;
 
         String enroll = userEnroll.getText().toString();
         String name = userName.getText().toString();

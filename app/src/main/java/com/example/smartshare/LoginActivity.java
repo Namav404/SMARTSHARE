@@ -12,39 +12,45 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
      private EditText Email, Password;
-     private Button Login;
-     private TextView Register, AdminLogin;
-     String user_email, user_pass;
+    String user_email, user_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Email = (EditText)findViewById(R.id.EditTextEmail);
-        Password = (EditText)findViewById(R.id.EditTextPassword);
-        Login = (Button)findViewById(R.id.btnLogin);
-        Register = (TextView)findViewById(R.id.TextViewRegister);
-        AdminLogin = (TextView)findViewById(R.id.TextViewAdminLogin);
+        Email = findViewById(R.id.EditTextEmail);
+        Password = findViewById(R.id.EditTextPassword);
+        Button login = findViewById(R.id.btnLogin);
+        TextView register = findViewById(R.id.TextViewRegister);
+        TextView adminLogin = findViewById(R.id.TextViewAdminLogin);
+        TextView forgotPassword = findViewById((R.id.TextViewFGP));
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validate(Email.getText().toString(), Password.getText().toString());
             }
         });
 
-        Register.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
             }
         });
 
-        AdminLogin.setOnClickListener(new View.OnClickListener() {
+        adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, AdminLoginActivity.class));
+            }
+        });
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, CompDepActivity.class));
             }
         });
 

@@ -11,18 +11,17 @@ import android.widget.Toast;
 public class AdminLoginActivity extends AppCompatActivity {
 
     private EditText Username, Password;
-    private Button Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-        Username = (EditText)findViewById(R.id.EditTextName);
-        Password = (EditText)findViewById(R.id.EditTextPassword);
-        Login = (Button)findViewById(R.id.btnLogin);
+        Username = findViewById(R.id.EditTextName);
+        Password = findViewById(R.id.EditTextPassword);
+        Button login = findViewById(R.id.btnLogin);
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validate(Username.getText().toString(), Password.getText().toString());
