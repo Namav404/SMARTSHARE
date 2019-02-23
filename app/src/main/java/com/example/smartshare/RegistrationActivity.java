@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 public class RegistrationActivity extends AppCompatActivity {
 
     String en_no, user_name, user_email, user_pass, user_pno;

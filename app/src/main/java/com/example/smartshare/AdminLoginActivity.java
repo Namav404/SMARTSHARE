@@ -1,8 +1,7 @@
 package com.example.smartshare;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,10 +30,7 @@ public class AdminLoginActivity extends AppCompatActivity {
     }
 
     private void validate(String Username, String Password) {
-        if (Username.equals("admin") && Password.equals("q12we34r")){
-            Toast.makeText(this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(AdminLoginActivity.this, AdminHomepageActivity.class));
-        }else {
+        if (Username.isEmpty() && Password.isEmpty()){
             Toast.makeText(this, "Please enter the correct details!", Toast.LENGTH_SHORT).show();
         }
     }
